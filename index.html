@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <div class="container contenedor-principal">
+            <div class="contenedor1">
+                <div class="logo"></div>
+                <form class="formulario" action="">
+                    <textarea class="txtarea" id="textoEntrada" placeholder="Ingrese el texto aquí"></textarea>
+                    <section class="sugerencia">
+                        <i class="fa-solid fa-circle-exclamation excla"></i>
+                        <p class="sugerencia__texto">Solo letras minúsculas y sin acento</p>
+                    </section>
+                    <div class="botones">
+                        <div class="encriptar">
+                            <input class="boton boton__encriptar" type="button" value="Encriptar" onclick="encriptarTexto()">
+                        </div>
+                        <div class="desencriptador">
+                            <input class="boton boton__desencriptar" type="button" value="Desencriptar" onclick="desencriptarTexto()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Contenedor de Salida -->
+            <div class="contenedor2" id="contenedorSalida">
+                <div class="encrip">
+                    <img class="encrip__imagen" src="imagenes/Muñeco.png" alt="Imagen ilustrativa">
+                    <div class="encrip__contenido" id="resultadoContenido">
+                        <p class="encrip__mensajeencontrado">Ningún mensaje fue encontrado</p>
+                        <p class="encrip__ingresar">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        <!-- Cambia el texto aquí después de encriptar/desencriptar -->
+                        <textarea id="mensajeSalida" class="hidden  encrip__mensaje" readonly>Ningún mensaje fue encontrado</textarea>
+                        <!-- Botón para copiar el texto -->
+                        <button id="copy-btn" class="hidden boton__copiar">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            Creado por <strong>Jesús Evangelista</strong>
+        </div>
+    </footer>
+
+    <script src="JavaScript.js"></script>
+</body>
+</html>
